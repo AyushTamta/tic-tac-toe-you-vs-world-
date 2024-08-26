@@ -1,40 +1,47 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js"defer></script>
-        <title>Tic</title>
-    </head>
-    <body>
-        <div class="board circle" id="board">
-
-            <div class="cell x" data-cell></div>
-            <div class="cell circle" data-cell></div>
-            <div class="cell"data-cell></div>
-            <div class="cell"data-cell></div>
-            <div class="cell"data-cell></div>
-            <div class="cell"data-cell></div>
-            <div class="cell"data-cell></div>
-            <div class="cell"data-cell></div>
-            <div class="cell"data-cell></div>
-
-        </div>
-        
-
-        <div class="winning-message " id="winningMessage">
-            <div data-winning-message-text>x wins</div>
-            <button id="restartButton">Restart</button>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Setup Screen -->
+        <div class="setup-screen">
+            <h1>Tic-Tac-Toe</h1>
+            <div class="mode-selection">
+                <button class="mode-button" data-mode="player-vs-player">2 Player Mode</button>
+                <button class="mode-button" data-mode="player-vs-computer">Play vs Computer</button>
+            </div>
         </div>
 
+        <!-- Player Selection Screen -->
+        <div class="player-selection hidden">
+            <button class="player-button" data-player="x">Play as X</button>
+            <button class="player-button" data-player="o">Play as O</button>
+            <button class="home-button">Home</button>
+        </div>
 
-        <script src="" async defer></script>
-    </body>
+        <!-- Game Screen -->
+        <div class="game-screen hidden">
+            <div class="game-board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <button class="reset-button">Reset Game</button>
+            <div class="status"></div>
+            <button class="home-button">Home</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
